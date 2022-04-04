@@ -4,12 +4,12 @@ function changeSize(object, size, time) {
 
 function validateInput(object) {
   let rightVariant = ''
-  for(let symbol of object[0].value) {
+  for(let symbol of object.val()) {
     if(/\d/.test(symbol)) {
       rightVariant += symbol;
     }
   }
-  object[0].value = rightVariant;
+  object.val(rightVariant) ;
 }
 
 $(document).ready(function() {
