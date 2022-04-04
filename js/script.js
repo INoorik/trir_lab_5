@@ -13,4 +13,5 @@ function validateInput(object) {
 $(document).ready(function() {
     validateInput($('#min_size'));
     validateInput($('#max_size'));
+    changeSize($('#box'), $('#min_size').val(), 0);
 });
