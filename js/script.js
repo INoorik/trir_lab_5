@@ -16,4 +16,7 @@ $(document).ready(function() {
   $('#min_size').keyup(function(){
     validateInput($('#min_size'));
   });
+  $('#max_size').keyup(function(){
+    validateInput($('#max_size'));
+  });
 });
