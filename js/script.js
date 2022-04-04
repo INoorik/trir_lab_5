@@ -33,7 +33,7 @@ $(document).ready(function() {
       $('#box').animate({left: coordinates.x, top: coordinates.y}, 2000);
     }, 3000);
     setInterval(function() {
-      $('#box').text(`${Math.round($('#box').position().left)}:${
+      $('#coordinates').text(`${Math.round($('#box').position().left)}:${
         Math.round($('#box').position().top)}`);
     }, 100);
 });
