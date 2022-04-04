@@ -3,3 +3,7 @@ body{
     background: buttonface;
     align-content: center;
 }
+
+.box {
+  background-color: blue;
+}
