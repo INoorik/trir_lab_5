@@ -1,4 +1,5 @@
 function changeSize(object, size, time) {
+  $('#box').stop();
   object.animate({ width:size, height:size}, time);
 }
 
@@ -24,11 +25,11 @@ $(document).ready(function() {
     validateInput($('#max_size'));
     changeSize($('#box'), $('#min_size').val(), 0);
     $('#box').click(function() {
-      changeSize($('#box'), $(is_increased?'#min_size':'#max_size').val(), 5000);
+      changeSize($('#box'), $(is_increased?'#min_size':'#max_size').val(), 1000);
       is_increased = !is_increased;
     });
     setInterval(function() {
       let coordinates = generateRandomCoordinates();
-      $('#box').animate({left: coordinates.x, top: coordinates.y}, 5000);
-    }, 1000);
+      $('#box').animate({left: coordinates.x, top: coordinates.y}, 2000);
+    }, 3000);
 });
