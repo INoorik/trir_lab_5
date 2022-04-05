@@ -1,5 +1,5 @@
 function changeSize(object, size, time) {
-  $('#box').stop();
+  object.stop();
   object.animate({ width:size, height:size}, time);
 }
 
