@@ -3,7 +3,7 @@ function changeSize(object, size, time) {
   object.animate({ width:size, height:size}, time);
 }
 
-function validateInput(object) {
+function preventNonNumbers(object) {
   object.keydown(function(event) {
     if(!/\d|Backspace/.test(event.originalEvent.key)) {
       event.preventDefault();
@@ -21,8 +21,8 @@ function generateRandomCoordinates() {
 
 let is_increased = false;
 $(document).ready(function() {
-    validateInput($('#min_size'));
-    validateInput($('#max_size'));
+    preventNonNumbers($('#min_size'));
+    preventNonNumbers($('#max_size'));
     $('#start_button').click(function(){
       $('form').hide();
       $('#box').show();
